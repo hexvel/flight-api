@@ -1,17 +1,17 @@
-# Инструкция
+# Flight API
 
-Этот проект представляет собой простой REST API для управления данными о рейсах с использованием FastAPI и MySQL.
+This project is a simple REST API for managing flight data using FastAPI and MySQL.
 
-## Установка
+## Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/hexvel/flight-api.git
+   git clone https://github.com/yourusername/flight-api.git
    cd flight-api
    ```
 
-2. Создайте виртуальное окружение и установите зависимости:
+2. Set up a virtual environment and install dependencies:
 
    ```bash
    python3 -m venv venv
@@ -19,32 +19,32 @@
    pip install -r requirements.txt
    ```
 
-3. Настройте параметры вашей базы данных MySQL в `app/config.py`.
+3. Configure your MySQL database settings in `app/config.py`.
 
-4. Запустите скрипт миграции базы данных:
+4. Run the database migration script:
 
    ```bash
    python migrations/create_flights_table.py
    ```
 
-5. Запустите приложение FastAPI:
+5. Start the FastAPI application:
 
    ```bash
    uvicorn main:app --reload
    ```
 
-## API Эндпоинты
+## API Endpoints
 
-- `POST /api/v1/flights`: Добавить новый рейс.
-- `GET /api/v1/flights/{flight_no}`: Получить информацию о рейсе по его номеру.
+- `POST /api/v1/flights`: Add a new flight.
+- `GET /api/v1/flights/{flight_no}`: Retrieve a flight by its flight number.
 
-## Аутентификация
+## Authentication
 
-Используйте заголовок `X-API-KEY: secret` для аутентификации запросов.
+Use the header `X-API-KEY: secret` to authenticate requests.
 
-## Запуск тестов
+## Running Tests
 
-Запустите тесты с помощью следующей команды:
+Run the tests with the following command:
 
 ```bash
 python -m unittest discover tests
