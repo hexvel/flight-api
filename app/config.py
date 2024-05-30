@@ -13,4 +13,4 @@ class Config:
 
     SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{user}:{password}@{db_ip}/{db_name}"
 
-    SECRET_KEY = os.environ.get("SECRET_KEY") or "secret"
+    SECRET_KEY = os.getenv("SECRET_KEY", "secret")
