@@ -7,7 +7,7 @@ This project is a simple REST API for managing flight data using FastAPI and MyS
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/flight-api.git
+   git clone https://github.com/hexvel/flight-api.git
    cd flight-api
    ```
 
